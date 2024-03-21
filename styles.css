@@ -123,6 +123,6 @@ main {
 .article-thread h3 {
         border-bottom: solid 1.5px lightgray;
 }
-.article-thread a {
+.article-thread h3 a {
         text-decoration: none;
 }
