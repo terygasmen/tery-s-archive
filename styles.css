@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Varela+Round&display=swap');
+
+:root {
+        --font-style: "Noto Sans Mono", monospace;
+        --h1-size: 1.5em;
+        --h2-size: 1.2em;
+        --dark-gray: rgb(65, 65, 65);
+        --background-color: rgb(240, 240, 240);
+}
+
+body { 
+        font-family: var(--font-style);
+        margin: 0;
+        background-color: var(--background-color);
+}
+h1 { font-size: var(--h1-size); }
+h2 { 
+        font-size: var(--h2-size);
+        border-bottom: 1px solid black;
+        margin: 0.2px;
+}
+ul { 
+        padding: 0; 
+        margin: 0.5rem 0;
+}
+li { list-style-type: none;}
+ol {
+        padding-left: 20px;
+        margin: 0;
+}
+ol li {
+        list-style-type: disc;
+}
+
+/* header */
+header {   
+        position: fixed;   
+        top: 0; 
+        width: 100%;
+        height: 25px;
+        background-color: white;
+        overflow: hidden;
+}
+header p {
+        margin: 0;
+        padding: 0.2rem;
+}
+#scroll-text {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%); 
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
+}
+/* for Firefox */
+@-moz-keyframes my-animation {
+        from { -moz-transform: translateX(100%); }
+        to { -moz-transform: translateX(-100%); }
+}
+      /* for Chrome */
+@-webkit-keyframes my-animation {
+        from { -webkit-transform: translateX(100%); }
+        to { -webkit-transform: translateX(-100%); }
+}
+      
+@keyframes my-animation {
+        from {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+        }
+        to {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+        }
+}
+     
+/* sidebar */
+aside { 
+        height: 100%;
+        width: 260px;
+        position: fixed;
+        z-index: 1;
+        top: 20;
+        left: 0;
+        overflow: hidden;
+        padding: 25px;
+}
+aside a {
+        text-decoration: none;
+        display: block;
+}
+.website-checklist {
+        border: 1px solid black;
+        padding: 0.5rem;
+        margin: 2rem 0;
+}
+/* main */
+main {
+        margin: 25px 0 0 300px;
+        padding: 2rem 12rem;    
+        line-height: 1.5em; 
+}
+.article { 
+        border: 1px solid black;
+        padding: 1.5rem;
+        margin: 2rem 0;
+}
+.article-date, .article-tags { 
+        margin: 0; 
+        font-size: 14px;
+        color: var(--dark-gray);
+}
+.article-content { 
+        padding: 0.2rem 1rem;
+}
