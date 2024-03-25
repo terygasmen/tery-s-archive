@@ -127,3 +127,7 @@ main {
 .article-thread h3 a, .article-gray h2 a {
         text-decoration: none;
 }
+.article-image {
+        max-height:100%; 
+        max-width:100%;
+}
